@@ -13,6 +13,7 @@ import HelloWorld from './components/HelloWorld.vue'
   </div>
   <h1>fuzayil</h1>
   <HelloWorld msg="Vite + Vue" />
+  <h1>ABJAPPAR KRASSAVCHIK</h1>
 </template>
 
 <style scoped>
