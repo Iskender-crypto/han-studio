@@ -14,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <h1>Iskender</h1>
   <HelloWorld msg="Vite + Vue" />
   <h1>Abdujabbor krasavchik</h1>
+  <h1>Fuzail krasavchik</h1>
 </template>
 
 <style scoped>
