@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
@@ -27,6 +28,7 @@ const responsiveOptions = ref([
   }
 ]);
 const displayBasic = ref(false);
+console.log(displayBasic)
 
 onMounted(() => {
   PhotoService.getImages().then((data) => (images.value = data));
@@ -36,20 +38,21 @@ onMounted(() => {
 <template>
   <div class="container">
     <h2>EXPLORE MY PHOTOGRAFY WORK.</h2>
-    <div style="display: flex;flex-wrap: nowrap" class="">
-    <swiper
-        ref="{swiperRef}"
-        :slidesPerView="3"
-        :centeredSlides="true"
-        :spaceBetween="30"
-        :navigation="true"
-        :modules="modules"
-        class="mySwiper"
-    >
-      <swiper-slide>
-        <div class="col">
-        <img src="/public/img/Rectangle%20307.png" alt="">
-          <h5>Faces of Resilince</h5>
+    <div style="display: flex;flex-wrap: nowrap" class="big">
+      <swiper
+          ref="{swiperRef}"
+          :slidesPerView="3"
+          :centeredSlides="true"
+          :spaceBetween="30"
+          :navigation="true"
+          :modules="modules"
+          class="mySwiper"
+      >
+        <swiper-slide>
+          <div class="col-md-4 col-sm-12 mb-5">
+            <img class="w-full" src="/public/img/Rectangle%20307.png" alt="">
+            <div style="display:flex;align-items: center;justify-content: space-between" class="">
+              <h5>Faces of Resilince</h5>
               <div class="card flex justify-center">
                 <Galleria v-model:visible="displayBasic" :value="images" :responsiveOptions="responsiveOptions" :numVisible="9" containerStyle="max-width: 50%" :circular="true" :fullScreen="true" :showItemNavigators="true">
                   <template #item="slotProps">
@@ -59,49 +62,49 @@ onMounted(() => {
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
                   </template>
                 </Galleria>
-                <Button label="Show" icon="pi pi-external-link" @click="displayBasic = true" />
+                <Button label="New" @click="displayBasic = true"/>
               </div>
             </div>
-        <P>JANUARY 2022</P>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="col">
-        <img src="/public/img/Rectangle%20307.png" alt="">
-        <div class="">
-          <h5>A Wedding Tale</h5>
-          <h5>VIEW PROJECT</h5>
-        </div>
-        <P>JANUARY 2022</P>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="col">
-        <img src="/public/img/Rectangle%20307.png" alt="">
-        <div class="">
-          <h5>Product Elegance</h5>
-          <h5>VIEW PROJECT</h5>
-        </div>
-        <P>JANUARY 2022</P>
-    </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="col">
-        <img src="/public/img/Rectangle%20307.png" alt="">
-        <div class="">
-          <h5>Faces of Resilince</h5>
-          <h5>VIEW PROJECT</h5>
-        </div>
-        <P>JANUARY 2022</P>
-        </div>
-      </swiper-slide>
-    </swiper>
+            <P>JANUARY 2022</P>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="col-md-4 col-sm-12 mb-5">
+            <img class="w-full" src="/public/img/Rectangle%20307.png" alt="">
+            <div style="display: flex;align-items: center;justify-content: space-between" class="">
+              <h5>A Wedding Tale</h5>
+              <h5>VIEW PROJECT</h5>
+            </div>
+            <P>JANUARY 2022</P>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="col-md-4 col-sm-12 mb-5">
+            <img class="w-full" src="/public/img/Rectangle%20307.png" alt="">
+            <div style="display: flex;align-items: center;justify-content: space-between" class="">
+              <h5>Product Elegance</h5>
+              <h5>VIEW PROJECT</h5>
+            </div>
+            <P>JANUARY 2022</P>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="col-md-4 col-sm-12 mb-5">
+            <img class="w-full" src="/public/img/Rectangle%20307.png" alt="">
+            <div style="display: flex;align-items: center;justify-content: space-between" class="">
+              <h5>Faces of Resilince</h5>
+              <h5>VIEW PROJECT</h5>
+            </div>
+            <P>JANUARY 2022</P>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
 </template>
 
 <style scoped>
-.col{
-  width: 100%;
+.big{
   flex-wrap: wrap;
 }
 .container{
@@ -114,18 +117,10 @@ onMounted(() => {
   .container{
     width: 992px;
   }
-  .col{
-    width: 33.333%;
-    flex-wrap: nowrap;
-  }
 }
 @media screen and (max-width: 992px) {
   .container{
     width: 776px;
-  }
-  .col{
-    width: 50%;
-    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 776px) {
