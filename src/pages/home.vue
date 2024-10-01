@@ -1,4 +1,10 @@
-<script setup>
+
+<template>
+  <div>
+    <h1>hello</h1>
+  </div>
+</template>
+<script setup lang="ts">
 import { ref, onMounted } from "vue";
 const images = ref();
 const responsiveOptions = ref([
@@ -25,19 +31,5 @@ onMounted(() => {
   PhotoService.getImages().then((data) => (images.value = data));
 })
 </script>
-<template>
-  <div class="card flex justify-center">
-    <Galleria v-model:visible="displayBasic" :value="images" :responsiveOptions="responsiveOptions" :numVisible="9" containerStyle="max-width: 50%" :circular="true" :fullScreen="true" :showItemNavigators="true"  :showThumbnails="false">
-      <template #item="slotProps">
-        <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
-      </template>
-      <template #thumbnail="slotProps">
-        <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
-      </template>
-    </Galleria>
-
-    <Button label="Show" icon="pi pi-external-link" @click="displayBasic = true" />
-  </div>
-</template>
 
 

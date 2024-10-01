@@ -1,6 +1,6 @@
 
-import { createRouter, createWebHistory, RouteRecordRaw }
-    from "vue-router";const routes: RouteRecordRaw[] = [
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+const routes: RouteRecordRaw[] = [
     {
         name: "home",
         path: "/home",
