@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import Aura from "@primevue/themes/aura"
 import './style.css'
 import router from './router/index'
 import PrimeVue from 'primevue/config'
@@ -32,7 +33,7 @@ import Divider from "primevue/divider";
 import Dropdown from "primevue/dropdown";
 import Fieldset from "primevue/fieldset";
 import FileUpload from "primevue/fileupload";
-import Galleria from "primevue/galleria";
+import Galleria from 'primevue/galleria';
 import InlineMessage from "primevue/inlinemessage";
 import Inplace from "primevue/inplace";
 import InputMask from "primevue/inputmask";
@@ -86,6 +87,11 @@ import TreeTable from "primevue/treetable";
 import VirtualScroller from "primevue/virtualscroller";
 
 const app = createApp(App)
+app.use(PrimeVue,{
+    theme: {
+        preset: Aura
+    }
+})
 app.use(PrimeVue)
 app.use(router)
 app.component('Accordion', Accordion);

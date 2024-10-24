@@ -3,12 +3,12 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 const routes: RouteRecordRaw[] = [
     {
         name: "home",
-        path: "/home",
-        component: () => import('../pages/home.vue'),
+        path: "/",
+        component: () =>  import('../pages/home.vue'),
     },
     {
         name: "app",
-        path: "/",
+        path: "/app",
         component: () => import('../pages/app.vue'),
     },
     {

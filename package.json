@@ -9,9 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@primevue/themes": "^4.1.1",
+    "await": "^0.2.6",
+    "default": "^0.1.1",
+    "export": "^0.1.337",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",
-    "primevue": "^4.0.7",
+    "primevue": "^4.1.1",
+    "router": "^1.3.8",
+    "swiper": "^11.1.10",
     "vue": "^3.4.37",
     "vue-router": "^4.4.5"
   },
