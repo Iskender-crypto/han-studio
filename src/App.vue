@@ -1,32 +1,32 @@
 <script setup lang="ts">
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-// import required modules
-import {Mousewheel, Pagination} from 'swiper/modules';
-import {Swiper, SwiperSlide} from 'swiper/vue';
-const  modules = ref([Mousewheel, Pagination])
-import { ref } from "vue";
-const images = ref();
-const responsiveOptions = ref([
-  {
-    breakpoint: '1500px',
-    numVisible: 5
-  },
-  {
-    breakpoint: '1024px',
-    numVisible: 3
-  },
-  {
-    breakpoint: '768px',
-    numVisible: 2
-  },
-  {
-    breakpoint: '560px',
-    numVisible: 1
-  }
-]);
-const displayBasic = ref(false);
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+// // import required modules
+// import {Mousewheel, Pagination} from 'swiper/modules';
+// import {Swiper, SwiperSlide} from 'swiper/vue';
+// const  modules = ref([Mousewheel, Pagination])
+// import { ref } from "vue";
+// const images = ref();
+// const responsiveOptions = ref([
+//   {
+//     breakpoint: '1500px',
+//     numVisible: 5
+//   },
+//   {
+//     breakpoint: '1024px',
+//     numVisible: 3
+//   },
+//   {
+//     breakpoint: '768px',
+//     numVisible: 2
+//   },
+//   {
+//     breakpoint: '560px',
+//     numVisible: 1
+//   }
+// ]);
+// const displayBasic = ref(false);
 </script>
 <template>
 <!--  <div class="container">-->
@@ -43,12 +43,12 @@ const displayBasic = ref(false);
 <!--    >-->
 <!--      <swiper-slide>-->
 <!--        <div class="col">-->
-<!--        <img src="/public/img/Rectangle%20307.png" alt="">-->
+<!--        <img src="assets/" alt="">-->
 <!--          <h5>Faces of Resilince</h5>-->
 <!--              <div class="card flex justify-center">-->
 <!--                <Galleria v-model:visible="displayBasic" :value="images" :responsiveOptions="responsiveOptions" :numVisible="9" containerStyle="max-width: 50%" :circular="true" :fullScreen="true" :showItemNavigators="true">-->
 <!--                  <template #item="slotProps">-->
-<!--                    <img src="/public/img/Rectangle%20308.png" :alt="slotProps.item.alt" style="width: 100%; display: block" />-->
+<!--                    <img src="/src/assets/iphone13.jpg" :alt="slotProps.item.alt" style="width: 100%; display: block" />-->
 <!--                  </template>-->
 <!--                  <template #thumbnail="slotProps">-->
 <!--                    <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />-->
@@ -61,7 +61,7 @@ const displayBasic = ref(false);
 <!--      </swiper-slide>-->
 <!--      <swiper-slide>-->
 <!--        <div class="col">-->
-<!--        <img src="/public/img/Rectangle%20307.png" alt="">-->
+<!--        <img src="/src/assets/iphone13.jpg" alt="">-->
 <!--        <div class="">-->
 <!--          <h5>A Wedding Tale</h5>-->
 <!--          <h5>VIEW PROJECT</h5>-->
@@ -71,7 +71,7 @@ const displayBasic = ref(false);
 <!--      </swiper-slide>-->
 <!--      <swiper-slide>-->
 <!--        <div class="col">-->
-<!--        <img src="/public/img/Rectangle%20307.png" alt="">-->
+<!--        <img src="/src/assets/iphone13.jpg" alt="">-->
 <!--        <div class="">-->
 <!--          <h5>Product Elegance</h5>-->
 <!--          <h5>VIEW PROJECT</h5>-->
@@ -81,7 +81,7 @@ const displayBasic = ref(false);
 <!--      </swiper-slide>-->
 <!--      <swiper-slide>-->
 <!--        <div class="col">-->
-<!--        <img src="/public/img/Rectangle%20307.png" alt="">-->
+<!--        <img src="/src/assets/iphone13.jpg" alt="">-->
 <!--        <div class="">-->
 <!--          <h5>Faces of Resilince</h5>-->
 <!--          <h5>VIEW PROJECT</h5>-->
@@ -90,92 +90,62 @@ const displayBasic = ref(false);
 <!--        </div>-->
 <!--      </swiper-slide>-->
 <!--    </swiper>-->
-<!--    </div>-->
-<!--<div class="banner">-->
-<!--  <div class="container">-->
-<!--    <div class="menu">-->
-<!--      <div class="layout"></div>-->
-<!--      <div class="menu_lab">-->
-<!--        <div class="logo">-->
-<!--          <img src="/src/assets/Damien.svg" alt="">-->
-<!--        </div>-->
-<!--        <div class="menu_bar">-->
-<!--          <div class="menu_card">-->
-<!--            <div @click="router.push('')" class="">-->
-<!--              About Me-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="menu_card">-->
-<!--            <div @click="router.push('')" class="">-->
-<!--              Portfolio-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="menu_card">-->
-<!--            <div @click="router.push('')" class="">-->
-<!--              Services-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="menu_button">-->
-<!--          <a href="" class="button_a">-->
-<!--            Contact Me-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="layout"></div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div class="layout2"></div>-->
-<!--  <div class="container">-->
-<!--    <div class="card-1">-->
-<!--      <div class="logo_img1">-->
-<!--        <img src="/src/assets/Vector%20(15).svg" alt="">-->
 <!--      </div>-->
 <!--    </div>-->
-<!--    <div class="grid">-->
-<!--      <div class="card">-->
-<!--        <div class="logo_img2">-->
-<!--          <img src="/src/assets/Group%207%20(1).svg" alt="">-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="card">-->
-<!--        <div class="logo_img2 ml">-->
-<!--          <img src="/src/assets/Group%208%20(1).svg" alt="">-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div class="layout2 mt"></div>-->
-<!--  <div class="container">-->
-<!--    <div class="text_end">-->
-<!--      <h1>Terms & Conditions | Privacy Policy</h1>-->
-<!--      <div class="contact_button">-->
-<!--        <button>-->
-<!--          <a href="https://www.facebook.com/HHanStudio">-->
-<!--            <img src="/src/assets/Vector%20(16).svg" alt="">-->
-<!--          </a>-->
-<!--        </button>-->
-
-<!--        <button>-->
-<!--          <a href="https://x.com/hanstudio_trt">-->
-<!--            <img src="/src/assets/Vector%20(17).svg" alt="">-->
-<!--          </a>-->
-<!--        </button>-->
-
-<!--        <button>-->
-<!--          <a href="https://www.instagram.com/hanstudio.osh/">-->
-<!--            <img src="/src/assets/Vector%20(18).svg" alt="">-->
-<!--          </a>-->
-<!--        </button>-->
-<!--      </div>-->
-<!--      <h1>© 2024 Damien Braun Photography. All rights reserved.</h1>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--</div>-->
-<!--  </div>-->
-
-
+<div class="banner">
+  <div class="container">
+    <div class="menu">
+      <div class="menu_lab">
+        <div class="logo">
+          <img src="/src/assets/Damien.svg" alt="">
+        </div>
+        <div class="menu_bar">
+          <div class="menu_card">
+            <div @click="router.push('')" class="bt">
+              About Me
+            </div>
+          </div>
+          <div class="menu_card">
+            <div @click="router.push('')" class="bt">
+              Portfolio
+            </div>
+          </div>
+          <div class="menu_card">
+            <div @click="router.push('')" class="bt">
+              Services
+            </div>
+          </div>
+        </div>
+        <div class="menu_button">
+          <a href="" class="button_a">
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+      <div class="layout"></div>
+  </div>
+  <div class="layout2"></div>
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <div class="logo_img2">
+          <img src="/src/assets/Group%207%20(1).svg" alt="">
+        </div>
+      </div>
+      <div class="card-1">
+        <div class="logo_img1">
+          <img src="/src/assets/Vector%20(15).svg" alt="">
+        </div>
+      </div>
+      <div class="card">
+        <div class="logo_img2 ml">
+          <img src="/src/assets/Group%208%20(1).svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="banner">
     <div class="flex">
@@ -253,10 +223,142 @@ const displayBasic = ref(false);
   </div>
 </div>
 
+
+
+
+  <div class="layout2 mt"></div>
+  <div class="container">
+    <div class="text_end">
+      <h1 class="term">Terms & Conditions | Privacy Policy</h1>
+      <div class="contact_button">
+        <button class="icon_button">
+          <a href="https://www.facebook.com/HHanStudio">
+            <img src="/src/assets/Vector%20(16).svg" alt="">
+          </a>
+        </button>
+
+        <button class="icon_button">
+          <a href="https://x.com/hanstudio_trt">
+            <img src="/src/assets/Vector%20(17).svg" alt="">
+          </a>
+        </button>
+
+        <button class="icon_button">
+          <a href="https://www.instagram.com/hanstudio.osh/">
+            <img src="/src/assets/Vector%20(18).svg" alt="">
+          </a>
+        </button>
+      </div>
+      <h1 class="damien">© 2024 Damien Braun Photography. All rights reserved.</h1>
+    </div>
+  </div>
 </template>
 
 
 <style scoped>
+.layout{
+  width: 100%;
+  height: 1px;
+  background-color: #1C1C21;
+}
+.layout2{
+  width: 100%;
+  height: 1px;
+  background-color: #1C1C21;
+}
+.grid{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+}
+.ml{
+  margin-left: -100px;
+}
+.logo_img2 img{
+  width: 300px;
+  margin-top: 100px;
+}
+.text_end{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.icon_button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1C1C21;
+}
+.contact_button{
+  width: 150px;
+  height: 55px;
+  border: 1px solid #1C1C21;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.damien{
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #797C86;
+}
+.term{
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #797C86;
+}
+.menu_button{
+  width: 120px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #1C1C21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button_a{
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+}
+  .menu{
+    display: flex;
+    justify-content: space-between;
+  }
+.menu_bar{
+  display: flex;
+}
+.menu_card:hover{
+  background-color: #1C1C21;
+  transition: 0.8s;
+}
+.menu_card{
+  width: 150px;
+  height: 60px;
+  border: 1px solid #1C1C21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bt{
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  color: white;
+}
 .bio{
   font-family: Manrope;
   font-size: 44px;
